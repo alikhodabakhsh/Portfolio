@@ -1,0 +1,49 @@
+{% load static %}
+
+<!--============ HOME ============-->
+<section class="hero" id="home">
+	<div class="container">
+		<!--intro-->
+		<div class="hero-content">
+			<!-- avatar image -->
+			<img src="{{ me.userprofile.avatar.url }}" alt="{{ me.first_name }}">
+			<!-- info -->
+			<h1 class=" h1 hero-title">
+				Hi, I’m <span class="text--hsl">{{ me.first_name }} {{ me.last_name }} </span>&nbsp;<span
+					class="wave">👋</span>
+			</h1>
+			<p class="section-text">
+				I'm a <strong class="text--hsl">{{ me.userprofile.job }}</strong>
+				{{ me.userprofile.bio }}
+			</p>
+			<!-- contact button -->
+			<a href="#contact" class="btn btn-primary">Get in touch</a>
+		</div>
+		<!-- socials icon -->
+		<ul class="hero-social-list">
+			<li>
+				<a href="{{ me.userprofile.facebook }}" class="hero-social-link">
+					<ion-icon name="logo-facebook"></ion-icon>
+
+					<div class="tooltip">Facebook</div>
+				</a>
+			</li>
+			<li>
+				<a href="{{ me.userprofile.twitter }}" class="hero-social-link">
+					<ion-icon name="logo-twitter"></ion-icon>
+
+					<div class="tooltip">Twitter</div>
+				</a>
+			</li>
+			<li>
+				<a href="{{ me.userprofile.linkedin}}" class="hero-social-link">
+					<ion-icon name="logo-linkedin"></ion-icon>
+
+					<div class="tooltip">Linkedin</div>
+				</a>
+			</li>
+		</ul>
+		<!-- scroll button -->
+		<a href="#stats" class="scroll-down">Scroll</a>
+	</div>
+</section>

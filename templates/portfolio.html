@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+        <section class="project" id="portfolio">
+            <div class="project-content">
+                <h2 class="h2 section-title">Work</h2>
+                <ul class="project-list">
+                    {% for project in object_list %}
+                    <li>
+                        <a href="{% url 'portfolio:portfolio-detail' slug=project.slug  %}" class="project-card">
+
+                            <figure class="card-banner">
+                                <img src="{{ project.image.url }}" class="w-100"
+                                    alt="A macintosh on a yellow background.">
+                            </figure>
+
+                            <div class="card-content">
+                               
+                                <h3  class="h4 card-title">{{ project.name }}</h3>
+
+                                <time class="publish-date" datetime="">{{ project.date }}</time>
+                            
+                            </div>
+
+                        </a>
+                    </li>
+                    {% endfor %}
+
+                </ul>
+            </div>
+        </section>
+<!-- Footer -->
+{% include 'footer.html' %}
+{% endblock content %}

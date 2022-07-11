@@ -1,0 +1,51 @@
+{% load static %}
+
+    <!-- 
+      - #PROJECTS
+    -->
+
+    <section class="project" id="portfolio">
+
+        <ul class="project-list">
+  
+          <li>
+            <div class="project-content section-content">
+  
+              <p class="section-subtitle">My Works</p>
+  
+              <h2 class="h3 section-title">See My Works Which Will Amaze You!</h2>
+  
+              <p class="section-text">
+                We develop the best quality website that serves for the long-term. Well-documented, clean, easy and
+                elegant interface
+                helps any non-technical clients.
+              </p>
+  
+            </div>
+          </li>
+           
+          {% for project in portfolio  %}
+          <li>
+            <a class="project-card">
+  
+              <figure class="card-banner">
+                <img src="{{ project.image.url }}" class="w-100" alt="A macintosh on a yellow background.">
+              </figure>
+  
+              <div class="card-content">
+                <h3 class="h4 card-title">{{ project.name }}</h3>
+  
+                <time class="publish-date" datetime="">{{ project.date }}</time>
+              </div>
+  
+            </a>
+          </li>
+          {% endfor %}
+
+          <li>
+            <button class="load-more">Load more work</button>
+          </li>
+  
+        </ul>
+  
+      </section>

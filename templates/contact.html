@@ -1,0 +1,172 @@
+{% load static %}
+
+    <!-- 
+      - #CONTACT
+    -->
+
+    <section class="contact" id="contact">
+
+        <div class="contact-content section-content">
+  
+          <p class="section-subtitle">Contact</p>
+  
+          <h2 class="h3 section-title">Have You Any Project? Please Drop a Message</h2>
+  
+          <p class="section-text">
+            Get in touch and let me know how i can help. Fill out the form and i’ll be in touch as soon as possible.
+          </p>
+  
+          <ul class="contact-list">
+  
+            <li class="contact-list-item">
+  
+              <div class="contact-item-icon">
+                <ion-icon name="location-outline"></ion-icon>
+              </div>
+  
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title">Address:</h3>
+  
+                <address class="contact-info">
+                  {{ me.userprofile.address }}
+                </address>
+              </div>
+  
+            </li>
+  
+            <li class="contact-list-item">
+  
+              <div class="contact-item-icon">
+                <ion-icon name="call-outline"></ion-icon>
+              </div>
+  
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title">Phone:</h3>
+  
+                <a href="tel:{{ me.userprofile.phone }}" class="contact-info">{{ me.userprofile.phone }}</a>
+              </div>
+  
+            </li>
+  
+            <li class="contact-list-item">
+  
+              <div class="contact-item-icon">
+                <ion-icon name="mail-outline"></ion-icon>
+              </div>
+  
+              <div class="wrapper">
+                <h3 class="h4 contact-item-title">Email:</h3>
+  
+                <a href="mailto:{{ me.userprofile.email }}" class="contact-info">{{ me.userprofile.email }}</a>
+  
+              </div>
+  
+            </li>
+  
+            <li>
+              <ul class="contac-social-list">
+  
+                <li>
+                  <a href="{{ me.userprofile.facebook }}" class="contact-social-link">
+                    <div class="tooltip">Facebook</div>
+  
+                    <ion-icon name="logo-facebook"></ion-icon>
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="{{ me.userprofile.twitter }}" class="contact-social-link">
+                    <div class="tooltip">Twitter</div>
+  
+                    <ion-icon name="logo-twitter"></ion-icon>
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="{{ me.userprofile.linkedin }}" class="contact-social-link">
+                    <div class="tooltip">Linkedin</div>
+  
+                    <ion-icon name="logo-linkedin"></ion-icon>
+                  </a>
+                </li>
+  
+                <li>
+                  <a href="{{ me.userprofile.instagram }}" class="contact-social-link">
+                    <div class="tooltip">Instagram</div>
+  
+                    <ion-icon name="logo-instagram"></ion-icon>
+                  </a>
+                </li>
+  
+              </ul>
+            </li>
+  
+          </ul>
+  
+        </div>
+  
+        <form action="" class="contact-form">
+  
+          <div class="form-wrapper">
+  
+            <label for="name" class="form-label">Name</label>
+  
+            <div class="input-wrapper">
+  
+              <input type="text" name="name" id="name" required placeholder="e.g John Doe" class="input-field">
+  
+              <ion-icon name="person-circle"></ion-icon>
+  
+            </div>
+  
+          </div>
+  
+          <div class="form-wrapper">
+  
+            <label for="email" class="form-label">Email</label>
+  
+            <div class="input-wrapper">
+  
+              <input type="email" name="email" id="email" required placeholder="e.g johndoe@mail.com"
+                class="input-field">
+  
+              <ion-icon name="mail"></ion-icon>
+  
+            </div>
+  
+          </div>
+  
+          <div class="form-wrapper">
+  
+            <label for="phone" class="form-label">Phone</label>
+  
+            <div class="input-wrapper">
+  
+              <input type="tel" name="phone" id="phone" required placeholder="Phone Number" class="input-field">
+  
+              <ion-icon name="call"></ion-icon>
+  
+            </div>
+  
+          </div>
+  
+          <div class="form-wrapper">
+  
+            <label for="message" class="form-label">Message</label>
+  
+            <div class="input-wrapper">
+  
+              <textarea name="message" id="message" required placeholder="Write message..."
+                class="input-field"></textarea>
+  
+              <ion-icon name="chatbubbles"></ion-icon>
+  
+            </div>
+  
+          </div>
+  
+          <button type="submit" class="btn btn-primary">Send</button>
+  
+        </form>
+  
+      </section>
