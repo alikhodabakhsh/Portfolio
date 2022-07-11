@@ -748,10 +748,108 @@ border-radius: var(--border-radius);
 
 
 /*-----------------------------------*\
- * #PROJECT
+ * #Portfolio
 \*-----------------------------------*/
+.portfolio .portfolio-filter{
+  flex: 0 0 100%;
+  max-width: 100%;
+  text-align: center;
+  margin-bottom: var(--m-2-5);
+}
+.portfolio .portfolio-filter button{
+  border: none;
+  background-color: transparent;
+  font-weight: var(--font-semibold);
+  text-transform: capitalize;
+  margin: var(--m-0-75);
+  cursor: pointer;
+  white-space: nowrap;
+  transition: 0.3s;
+}
+.portfolio .portfolio-filter button.active{
+  color: var(--color-primary);
+  position: relative;
+}
+.portfolio .portfolio-filter button.active::after{
+  content: '';
+  position: absolute;
+  bottom: -0.75rem;
+  left: 45%;
+  width: 0.3rem;
+  height: 0.3rem;
+  background-color: var(--color-primary);
+  border-radius: 50%;
+}
+.portfolio-item{
+  flex: 0 0 33.33%;
+  max-width: 33.33%;
+  margin-bottom: var(--m-1-5);
+}
+.portfolio-item-inner{
+  position: relative;
+  overflow: hidden;
+}
+.portfolio-item .mask{
+  background: rgba(0,0,0,.9);
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  transition: 0.3s;
+  opacity: 0;
+}
+.portfolio-item-inner:hover .mask{
+  opacity: 0.9;
+}
+.portfolio-item .term{
+  color: #fff;
+  background: var(--color-primary);
+  border-bottom-left-radius: 0.98rem;
+  border-bottom-right-radius: 0.98rem;
+  position: absolute;
+  top: 0;
+  left: var(--m-1-5);
+  font-size: var(--small-font-size);
+  display: inline-block;
+  padding: 0.19rem 0.625rem;
+  transform: translateY(-40px);
+  transition: 0.3s;
+}
+.portfolio-item h3{
+  color: #fff;
+  font-size: 1.25rem;
+  margin: 0 0 .98rem;
+  padding: 0 1.25rem;
+  position: absolute;
+  top: 3.75rem;
+  transition: 0.3s;
+  transform: translateY(30px);
+  opacity: 0;
+}
+.portfolio-item .more-button{
+  color: #fff;
+  position: absolute;
+  bottom: var(--m-1-5);
+  left: var(--m-1-5);
+  font-size: 1.6rem;
+  display: block;
+  background: var(--color-primary);
+  height: 2.5rem;
+  width: 2.5rem;
+  cursor: pointer;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 28px;
+  transition: 0.3s;
+  opacity: 0;
+}
+.portfolio-item-inner:hover h3,.portfolio-item-inner:hover span{
+  opacity: 1;
+  transform: translateY(0);
+} 
 
-.project { padding-block: var(--section-padding); }
+
 
 .project-content{
   margin: 0 auto;
