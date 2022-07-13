@@ -12,6 +12,6 @@ app_name = "portfolio"
 urlpatterns = [
 	path('', IndexView.as_view(), name="home"),
 	path('contact/', ContactView.as_view(), name="contact"),
-	path('portfolio/', PortfolioView.as_view(), name="portfolios"),
+	path('portfolio-list/', PortfolioView.as_view(), name="portfolios-list"),
 	path('portfolio/<slug:slug>/', PortfolioDetailView.as_view(), name="portfolio-detail"),
 	]

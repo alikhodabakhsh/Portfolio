@@ -1,6 +1,87 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+<!-- #Portfolio -->
+<section class="portfolio-detail section" id="portfolio-detail">
+	<div class="details-container container grid ">
+		<div class="details-group">
+            <div class="details-tag">Development</div>
+            <h3 class="details-title"> hdsf sdfhsjdfh sdhfsdhf </h3>
+            <div class="details-meta">
+                <div class="details-portfolio">
+                    <img src="{{ me.userprofile.avatar.url }}" alt="" class="details-portfolio-img">
 
+                    <div class="details-data">
+                        <span class="details-subtitle">portfolio</span>
+                        <h3 class="details-data-title"> dfl sdjlsdj </h3>
+                    </div>
+                </div>
+                <div class="details-update">
+                    <span class="details-subtitle">Last update:</span>
+                    <h3 class="details-data-title">april , 24, 2202</h3>
+                </div>
+                <div class="details-rating">
+                    <span class="details-subtitle">Review:</span>
+                    <h3 class="details-data-title">
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i>
+                        <i class='bx bx-star'></i> 
+                        <i class='bx bx-star'></i>
+                        <span class="review">4.5</span>
+                    </h3>
+                </div>
+            </div>
+            <img src="{{ me.userprofile.avatar.url }}" alt="" class="details-img">
+            <div class="portfolio-description">
+                <h3 class="portfolio-description-title">Car</h3>
+                <p class="portfolio-description-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis autem ipsum officiis, quia iste rerum! Beatae esse doloremque ipsam commodi laudantium illum sunt similique vel? Iure ab adipisci ullam aliquam? </p>
+                <div class="description-list">
+                    <h3 class="description-list-title"> what is the target</h3>
+                    <div class="description-list-details">
+                        <p class="description-list-data">
+                            <i class='bx bx-star details-icon'></i>
+                            dsfjdsa fdjsf jsdf dsf 
+                        </p>
+                        <p class="description-list-data">
+                            <i class='bx bx-star details-icon'></i>
+                            dsfj sdfj sd fsd 
+                        </p>
+                        <p class="description-list-data">
+                            <i class='bx bx-star details-icon'></i>
+                            sdfjs dfj sdfjsd 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="introduction">
+            <img src="" alt="" class="introduction-thumb">
+            <div class="introduction-content">
+                <div class="introduction-group">
+                    <i class='bx bxs-graduation introduction-icon'></i>
+                    <h3 class="introduction-info"><span> intro :</span> Car</h3>
+                </div>
+                <div class="introduction-group">
+                    <i class='bx bxs-graduation introduction-icon'></i>
+                    <h3 class="introduction-info"><span> intro :</span> Car</h3>
+                </div>
+                <div class="introduction-group">
+                    <i class='bx bxs-graduation introduction-icon'></i>
+                    <h3 class="introduction-info"><span> intro :</span> Car</h3>
+                </div>
+                <div class="introduction-group">
+                    <i class='bx bxs-graduation introduction-icon'></i>
+                    <h3 class="introduction-info"><span> intro :</span> Car</h3>
+                </div>
+                <div class="introduction-group">
+                    <i class='bx bxs-graduation introduction-icon'></i>
+                    <h3 class="introduction-info"><span> intro :</span> Car</h3>
+                </div>
+            </div>
+        </div>
+	</div>
+</section>
+<!-- Footer -->
 {% include 'footer.html' %}
 {% endblock content %}

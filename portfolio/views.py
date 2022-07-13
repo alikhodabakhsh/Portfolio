@@ -15,7 +15,7 @@ from . forms import ContactForm
 
 
 class IndexView(TemplateView):
-	template_name = "homePage.html"
+	template_name = "index.html"
 
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
@@ -47,7 +47,7 @@ class ContactView(FormView):
 
 class PortfolioView(ListView):
 	model = Portfolio
-	template_name = "portfolio.html"
+	template_name = "portfolio-list.html"
 	paginate_by = 10
 
 	def get_queryset(self):
