@@ -123,7 +123,10 @@
 
 body.dark_theme {
 
-   
+  --title-color: hsl(var(--second-hue), 15%, 95%);
+  --text-color: hsl(var(--second-hue), 8%, 75%);
+  --body-color: hsl(var(--second-hue), 48%, 8%);
+  --container-color:hsl(var(--second-hue), 60%, 6%);
   --card-shadow: hsla(0, 0%, 0%, 0.4);
   --input-bg: hsl(var(--second-hue), 48%, 13%);
 
@@ -282,6 +285,14 @@ span.text--hsl {
 .wave {
   display: inline-block;
   animation: animate-wave 500ms infinite ease-in-out;
+}
+.load-more{
+  align-items: center;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: var(--h2-font-size);
+  font-weight: var(--font-semibold);
+  color: var(--first-color);
 }
 
 @keyframes animate-wave {
