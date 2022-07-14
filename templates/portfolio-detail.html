@@ -5,23 +5,23 @@
 <section class="portfolio-detail section" id="portfolio-detail">
 	<div class="details-container container grid ">
 		<div class="details-group">
-            <div class="details-tag">Development</div>
-            <h3 class="details-title"> hdsf sdfhsjdfh sdhfsdhf </h3>
+            <div class="details-tag">{{ object.tag }}</div>
+            <h3 class="details-title"> {{ object.title }} </h3>
             <div class="details-meta">
                 <div class="details-portfolio">
-                    <img src="{{ me.userprofile.avatar.url }}" alt="" class="details-portfolio-img">
+                    <img src="{{ me.userprofile.avatar.url }}" alt="{{ me.userprofile.avatar.url }}" class="details-portfolio-img">
 
                     <div class="details-data">
-                        <span class="details-subtitle">portfolio</span>
-                        <h3 class="details-data-title"> dfl sdjlsdj </h3>
+                        <span class="details-subtitle">user : </span>
+                        <h3 class="details-data-title">{{ me.userprofile.user }}</h3>
                     </div>
                 </div>
                 <div class="details-update">
-                    <span class="details-subtitle">Last update:</span>
-                    <h3 class="details-data-title">april , 24, 2202</h3>
+                    <span class="details-subtitle">Last update : </span>
+                    <h3 class="details-data-title">/h3>
                 </div>
                 <div class="details-rating">
-                    <span class="details-subtitle">Review:</span>
+                    <span class="details-subtitle">Review : </span>
                     <h3 class="details-data-title">
                         <i class='bx bx-star'></i>
                         <i class='bx bx-star'></i>
@@ -32,24 +32,25 @@
                     </h3>
                 </div>
             </div>
-            <img src="{{ me.userprofile.avatar.url }}" alt="" class="details-img">
+            <img src="{{ object.image.url }}" alt="image-" class="details-img">
             <div class="portfolio-description">
-                <h3 class="portfolio-description-title">Car</h3>
-                <p class="portfolio-description-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Blanditiis autem ipsum officiis, quia iste rerum! Beatae esse doloremque ipsam commodi laudantium illum sunt similique vel? Iure ab adipisci ullam aliquam? </p>
+                <p class="portfolio-description-details">
+                    {{ object.body }}
+                </p>
                 <div class="description-list">
-                    <h3 class="description-list-title"> what is the target</h3>
+                    <h3 class="description-list-title"> what is the target ? </h3>
                     <div class="description-list-details">
                         <p class="description-list-data">
                             <i class='bx bx-star details-icon'></i>
-                            dsfjdsa fdjsf jsdf dsf 
+                            Aim for the dead centre of the target. 
                         </p>
                         <p class="description-list-data">
                             <i class='bx bx-star details-icon'></i>
-                            dsfj sdfj sd fsd 
+                            Aim the arrow a little above the target.
                         </p>
                         <p class="description-list-data">
                             <i class='bx bx-star details-icon'></i>
-                            sdfjs dfj sdfjsd 
+                            When you've aligned the notch on the gun with the target, fire!
                         </p>
                     </div>
                 </div>
@@ -60,23 +61,15 @@
             <div class="introduction-content">
                 <div class="introduction-group">
                     <i class='bx bxs-graduation introduction-icon'></i>
-                    <h3 class="introduction-info"><span> intro :</span> Car</h3>
+                    <h3 class="introduction-info"><span> Order Date :</span>  {{ object.order_date }}</h3>
                 </div>
                 <div class="introduction-group">
                     <i class='bx bxs-graduation introduction-icon'></i>
-                    <h3 class="introduction-info"><span> intro :</span> Car</h3>
+                    <h3 class="introduction-info"><span> Final Date :</span>  {{ object.final_date }}</h3>
                 </div>
                 <div class="introduction-group">
                     <i class='bx bxs-graduation introduction-icon'></i>
-                    <h3 class="introduction-info"><span> intro :</span> Car</h3>
-                </div>
-                <div class="introduction-group">
-                    <i class='bx bxs-graduation introduction-icon'></i>
-                    <h3 class="introduction-info"><span> intro :</span> Car</h3>
-                </div>
-                <div class="introduction-group">
-                    <i class='bx bxs-graduation introduction-icon'></i>
-                    <h3 class="introduction-info"><span> intro :</span> Car</h3>
+                    <h3 class="introduction-info"><span> Status :</span>  {{ object.status }}</h3>
                 </div>
             </div>
         </div>

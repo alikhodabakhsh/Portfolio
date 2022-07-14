@@ -5,30 +5,16 @@
   <div class="container">
     <h2 class="section-title padd-15">Services</h2>
     <div class="row">
+      {% for service in services %}
       <!-- services item -->
       <div class="service-item padd-15">
         <div class="service-item-inner">
-            <img src="{{ me.userprofile.avatar.url }}"alt="{{ me.userprofile.first_name }}" >
-            <h2>UI/UX design</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+            <img src="{{ service.image.url }}"alt="{{ service.title }}" >
+            <h2>{{ service.title }}</h2>
+            <p>{{ service.description }}</p>
         </div>
       </div>
-      <!-- services item -->
-      <div class="service-item padd-15">
-        <div class="service-item-inner">
-            <img src="{{ me.userprofile.avatar.url }}"alt="{{ me.userprofile.first_name }}" >
-            <h2>UI/UX design</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-      </div>
-      <!-- services item -->
-      <div class="service-item padd-15">
-        <div class="service-item-inner">
-            <img src="{{ me.userprofile.avatar.url }}"alt="{{ me.userprofile.first_name }}" >
-            <h2>UI/UX design</h2>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-        </div>
-      </div>
+      {% endfor %}
     </div>
   </div>
 </section>

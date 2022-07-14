@@ -11,42 +11,19 @@
                 <div class="row">
                     <div class="timeline-box">
                         <div class="timeline">
+                            {% for education in resume %}
                             <!-- timeline item -->
                             <div class="timeline-item">
-                                <i class='bx bx-time timeline-icon'></i>
+                                <i class="lni lni-graduation timeline-icon"></i>
                                 <h3 class="timeline-date">
-                                    <i class='bx bx-user'></i> 2019-present
+                                    <i class='lni lni-calendar'></i> {{ education.date_education }}
                                 </h3>
-                                <h3 class="timeline-title"> Academic degree </h3>
+                                <h3 class="timeline-title"> {{ education.title_education }} </h3>
                                 <p class="timeline-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum nulla vitae
-                                    accusam
+                                    {{ education.description_education }}
                                 </p>
                             </div>
-                            <!-- timeline item -->
-                            <div class="timeline-item">
-                                <i class='bx bx-time timeline-icon'></i>
-                                <h3 class="timeline-date">
-                                    <i class='bx bx-time'></i> 2019-present
-                                </h3>
-                                <h3 class="timeline-title"> Academic degree </h3>
-                                <p class="timeline-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum nulla vitae
-                                    accusam
-                                </p>
-                            </div>
-                            <!-- timeline item -->
-                            <div class="timeline-item">
-                                <i class='bx bx-time timeline-icon'></i>
-                                <h3 class="timeline-date">
-                                    <i class='bx bx-time'></i> 2019-present
-                                </h3>
-                                <h3 class="timeline-title"> Academic degree </h3>
-                                <p class="timeline-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum nulla vitae
-                                    accusam
-                                </p>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>
@@ -56,42 +33,19 @@
                 <div class="row">
                     <div class="timeline-box">
                         <div class="timeline">
+                             {% for experience in resume %}
                             <!-- timeline item -->
                             <div class="timeline-item">
-                                <i class='bx bx-time timeline-icon'></i>
+                                <i class="lni lni-briefcase timeline-icon"></i>
                                 <h3 class="timeline-date">
-                                    <i class='bx bx-time'></i> 2019-present
+                                    <i class='lni lni-calendar'></i> {{ experience.date_experience }}
                                 </h3>
-                                <h3 class="timeline-title"> Academic degree </h3>
+                                <h3 class="timeline-title"> {{ experience.title_experience }} </h3>
                                 <p class="timeline-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum nulla vitae
-                                    accusam
+                                   {{ experience.description_experience }}
                                 </p>
                             </div>
-                            <!-- timeline item -->
-                            <div class="timeline-item">
-                                <i class='bx bx-time timeline-icon'></i>
-                                <h3 class="timeline-date">
-                                    <i class='bx bx-time'></i> 2019-present
-                                </h3>
-                                <h3 class="timeline-title"> Academic degree </h3>
-                                <p class="timeline-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum nulla vitae
-                                    accusam
-                                </p>
-                            </div>
-                            <!-- timeline item -->
-                            <div class="timeline-item">
-                                <i class='bx bx-time timeline-icon'></i>
-                                <h3 class="timeline-date">
-                                    <i class='bx bx-time'></i> 2019-present
-                                </h3>
-                                <h3 class="timeline-title"> Academic degree </h3>
-                                <p class="timeline-text">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet eum nulla vitae
-                                    accusam
-                                </p>
-                            </div>
+                            {% endfor %}
                         </div>
                     </div>
                 </div>

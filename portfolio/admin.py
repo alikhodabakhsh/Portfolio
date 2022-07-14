@@ -4,9 +4,9 @@ from . models import (
     ContactProfile,
     Portfolio,
     Skill,
-    Tool,
     AboutMe,
-    History,
+    Services,
+    Resume,
     )
 
 
@@ -14,30 +14,34 @@ from . models import (
 class UserProfileAdmin(admin.ModelAdmin):
 	list_display = ('user',)
 
-@admin.register(ContactProfile)
-class ContactAdmin(admin.ModelAdmin):
-	list_display = ('timestamp', 'name',)
 
 
 @admin.register(Portfolio)
 class PortfolioAdmin(admin.ModelAdmin):
-    list_display = ('id','name','is_active',)
+    list_display = ('name', 'id', 'is_active',)
     readonly_fields = ('slug',)
 
 
+@admin.register(Services)
+class ServicesAdmin(admin.ModelAdmin):
+    list_display = ('title',)
+
+
+@admin.register(Resume)
+class ResumeAdmin(admin.ModelAdmin):
+    list_display = ('title_education', 'title_experience', )
+    
+
 @admin.register(Skill)
 class SkillAdmin(admin.ModelAdmin):
-    list_display = ('id','name',)
+    list_display = ('name',)
 
-@admin.register(Tool)
-class ToolAdmin(admin.ModelAdmin):
-    list_display = ('id','name',)
 
 @admin.register(AboutMe)
 class AboutMeAdmin(admin.ModelAdmin):
-    list_display = ('id','title',)
+    list_display = ('title','id',)
 
-@admin.register(History)
-class HistoryAdmin(admin.ModelAdmin):
-    list_display = ('id','experience')
 
+@admin.register(ContactProfile)
+class ContactAdmin(admin.ModelAdmin):
+	list_display = ('timestamp', 'name',)

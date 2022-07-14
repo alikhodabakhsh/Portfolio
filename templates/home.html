@@ -6,12 +6,11 @@
     <!--intro-->
     <div class="hero-content">
       <!-- avatar image -->
-      <img src="{{ me.userprofile.avatar.url }}" alt="{{ me.first_name }}" />
+      <img src="{{ me.userprofile.avatar.url }}" alt="{{me.first_name|title}} {{me.last_name|title}} avatar" />
       <!-- info -->
       <h1 class="h1 hero-title">
         Hi, I’m
-        <span class="text--hsl">{{ me.first_name }} {{ me.last_name }} </span
-        >&nbsp;<span class="wave">👋</span>
+        <span class="text--hsl">{{ me.first_name }} {{ me.last_name }} </span>&nbsp;<span class="wave">👋</span>
       </h1>
       <p class="section-text">
         I'm a <strong class="text--hsl">{{ me.userprofile.job }}</strong>
@@ -23,23 +22,20 @@
     <!-- socials icon -->
     <ul class="hero-social-list">
       <li>
-        <a href="{{ me.userprofile.facebook }}" class="hero-social-link">
-          <ion-icon name="logo-facebook"></ion-icon>
-
-          <div class="tooltip">Facebook</div>
+        <a href="{{ me.userprofile.github }}" class="hero-social-link">
+          <i class="lni lni-github-original"></i>
+          <div class="tooltip">Github</div>
         </a>
       </li>
       <li>
-        <a href="{{ me.userprofile.twitter }}" class="hero-social-link">
-          <ion-icon name="logo-twitter"></ion-icon>
-
-          <div class="tooltip">Twitter</div>
+        <a href="{{ me.userprofile.instagram }}" class="hero-social-link">
+          <i class="lni lni-instagram-filled"></i>
+          <div class="tooltip">Instagram</div>
         </a>
       </li>
       <li>
         <a href="{{ me.userprofile.linkedin}}" class="hero-social-link">
-          <ion-icon name="logo-linkedin"></ion-icon>
-
+          <i class="lni lni-linkedin-original"></i>
           <div class="tooltip">Linkedin</div>
         </a>
       </li>

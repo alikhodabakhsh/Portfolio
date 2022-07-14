@@ -4,9 +4,9 @@ from .models import (
 		UserProfile,
 		Portfolio,
 		Skill,
-		Tool,
-		History,
 		AboutMe,
+		Services,
+		Resume,
 	)
 
 from django.views.generic import TemplateView, FormView, ListView, DetailView
@@ -20,16 +20,12 @@ class IndexView(TemplateView):
 	def get_context_data(self, **kwargs):
 		context = super().get_context_data(**kwargs)
 		
-		portfolio = Portfolio.objects.filter(is_active=True)
-		skill = Skill.objects.filter(is_key_skill=True)
-		tool = Tool.objects.filter(is_key_tool=True)
-		about_me = AboutMe.objects.all()
-		history = History.objects.all()
+		service = Services.objects.filter(is_active=True)[:3]
+		portfolio = Portfolio.objects.filter(is_active=True)[:6]
+		resume = Resume.objects.filter(is_active=True)[:3]
 		context["portfolio"] = portfolio
-		context["skills"] = skill
-		context["tools"] = tool
-		context["about_me"] = about_me
-		context["history"] = history
+		context["services"] = service
+		context["resume"] = resume
 
 		return context
 
@@ -48,10 +44,10 @@ class ContactView(FormView):
 class PortfolioView(ListView):
 	model = Portfolio
 	template_name = "portfolio-list.html"
-	paginate_by = 10
+	paginate_by = 9
 
 	def get_queryset(self):
-		return super().get_queryset().filter(is_active=True)
+		return super().get_queryset().filter(is_active=True)[:9]
 
 
 class PortfolioDetailView(DetailView):

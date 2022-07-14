@@ -1,6 +1,9 @@
 {% extends 'base.html' %}
 {% load static %}
 {% block content %}
+{% load static %}
+
+<!-- #Portfolio -->
 <section class="portfolio section" id="portfolio">
 	<div class="container">
 		<!-- section title -->
@@ -17,54 +20,22 @@
 			</div>
 		</div>
 		<div class="row">
+			{% for project in object_list %}
 			<!-- portfolio item -->
 			<div class="portfolio-item padd-15">
 				<div class="portfolio-item-inner">
 					<div class="portfolio-item-thumbnail">
-						<img src="{{ me.userprofile.avatar.url }}" alt="{{ me.userprofile.avatar.url }}">
-						<div class="mask"></div>
+						<a href="{% url 'portfolio:portfolio-detail' slug=project.slug %}">
+							<img src="{{ project.image.url }}" alt="{{ project.image.url }}">
+							<div class="mask"></div>
+						</a>
 					</div>
-					<span class="term">Art , Design</span>
-					<h3 class="portfolio-item-title">Project</h3>
+					<span class="term">{{ project.tag }}</span>
+					<h3 class="portfolio-item-title">{{ project.name }}</h3>
 					<span class="more-button">&hellip;</span>
 				</div>
 			</div>
-			<!-- portfolio item -->
-			<div class="portfolio-item padd-15">
-				<div class="portfolio-item-inner">
-					<div class="portfolio-item-thumbnail">
-						<img src="{{ me.userprofile.avatar.url }}" alt="{{ me.userprofile.avatar.url }}">
-						<div class="mask"></div>
-					</div>
-					<span class="term">Art , Design</span>
-					<h3 class="portfolio-item-title">Project</h3>
-					<span class="more-button">&hellip;</span>
-				</div>
-			</div>
-			<!-- portfolio item -->
-			<div class="portfolio-item padd-15">
-				<div class="portfolio-item-inner">
-					<div class="portfolio-item-thumbnail">
-						<img src="{{ me.userprofile.avatar.url }}" alt="{{ me.userprofile.avatar.url }}">
-						<div class="mask"></div>
-					</div>
-					<span class="term">Art , Design</span>
-					<h3 class="portfolio-item-title">Project</h3>
-					<span class="more-button">&hellip;</span>
-				</div>
-			</div>
-			<!-- portfolio item -->
-			<div class="portfolio-item padd-15">
-				<div class="portfolio-item-inner">
-					<div class="portfolio-item-thumbnail">
-						<img src="{{ me.userprofile.avatar.url }}" alt="{{ me.userprofile.avatar.url }}">
-						<div class="mask"></div>
-					</div>
-					<span class="term">Art , Design</span>
-					<h3 class="portfolio-item-title">Project</h3>
-					<span class="more-button">&hellip;</span>
-				</div>
-			</div>
+			{% endfor %}
 		</div>
 	</div>
 </section>

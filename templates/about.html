@@ -16,38 +16,27 @@
                         <div class="about-text padd-15">
                             <!-- about text-->
                             <p>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Quas eum corrupti a sint dolores, ipsam odit, culpa, delectus ea nesciunt soluta beatae eligendi animi! Ad alias id tempora soluta quae!
+                                {{ me.userprofile.about_me.body }}
                             </p>
                             <div>
-                                <a href="#" class="btn btn-primary">Download CV</a>
+                                <a Download href="{{me.userprofile.Cv.url}}" class="btn btn-primary">Download CV</a>
                             </div>
                         </div>
                         <div class="skills padd-15">
                             <div class="row">
+                                
                                 <!-- about text-->
                                 <div class="skill-item">
-                                    <h4>Devlopment</h4>
+                                    {% for skill in me.userprofile.skills.all %}
+                                    <h4> {{ skill.name }} </h4>
                                     <div class="porgress">
-                                        <div class="porgress-in" style=" width:80%; background:red;" >
-
+                                        <div class="porgress-in" style=" width:{{ skill.score }}%; background:#ff9415;" >
                                         </div>
-                                        <div class="skill-persent">95%</div>
+                                        <div class="skill-persent">{{ skill.score }}</div>
                                     </div>
+                                    {% endfor %}
                                 </div>
-                                <div class="skill-item">
-                                    <h4>Devlopment</h4>
-                                    <div class="porgress">
-                                        <div class="porgress-in"></div>
-                                        <div class="skill-persent">95%</div>
-                                    </div>
-                                </div>
-                                <div class="skill-item">
-                                    <h4>Devlopment</h4>
-                                    <div class="porgress">
-                                        <div class="porgress-in"></div>
-                                        <div class="skill-persent">95%</div>
-                                    </div>
-                                </div>
+                                
                             </div>
                         </div>
                     </div>
@@ -57,34 +46,34 @@
         <div class="row">
             <!-- fact item -->
             <div class="fact-item padd-15">
-                <i class="lin lin"></i>
+                <i class="lni lni-thumbs-up"></i>
                  <div class="details">
-                    <h3>198</h3>
+                    <h3>{{ me.userprofile.about_me.project }}</h3>
                     <p>Project done</p>
                  </div>
             </div>
             <!-- fact item -->
             <div class="fact-item padd-15">
-                <i class="lin lin"></i>
+                <i class="lni lni-thunder"></i>
                  <div class="details">
-                    <h3>198</h3>
-                    <p>Project done</p>
+                    <h3>{{ me.userprofile.about_me.experience }}</h3>
+                    <p>Experience</p>
                  </div>
             </div>
             <!-- fact item -->
             <div class="fact-item padd-15">
-                <i class="lin lin"></i>
+                <i class="lni lni-users"></i>
                  <div class="details">
-                    <h3>198</h3>
-                    <p>Project done</p>
+                    <h3>{{ me.userprofile.about_me.clients }}</h3>
+                    <p>Happy clients</p>
                  </div>
             </div>
             <!-- fact item -->
             <div class="fact-item padd-15">
-                <i class="lin lin"></i>
+                <i class="lni lni-cup"></i>
                  <div class="details">
-                    <h3>198</h3>
-                    <p>Project done</p>
+                    <h3>{{ me.userprofile.about_me.winner }}</h3>
+                    <p>Winner</p>
                  </div>
             </div>
         </div>
