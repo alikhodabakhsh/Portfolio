@@ -6,8 +6,9 @@ import re
 
 
 STATUS = (
-    (0, "Doing"),
-    (1, "Complated")
+    ("Doing", "Doing"),
+    ("Complated", "Complated"),
+
 )
 
 
@@ -105,7 +106,7 @@ class Portfolio(models.Model):
     image = models.ImageField(blank=True, null=True, upload_to="portfolio")
     order_date = models.DateTimeField(auto_now_add=True, blank=True, null=True)
     final_date = models.DateTimeField(auto_now=True, blank=True, null=True)
-    status = models.IntegerField(choices=STATUS, default=0)
+    status = models.CharField(max_length=20, choices=STATUS )
     tag = models.CharField(max_length=20, blank=True, null=True)
     is_active = models.BooleanField(default=True)
 
@@ -139,13 +140,13 @@ class Resume(models.Model):
         verbose_name_plural = 'Resume'
         verbose_name = "Resume"
 
-    title_education = models.CharField(max_length=20, blank=True, null=True)
+    title_education = models.CharField(max_length=200, blank=True, null=True)
     description_education = models.CharField(
         max_length=200, blank=True, null=True)
     date_education = models.CharField(max_length=20,
         blank=True, null=True)
 
-    title_experience = models.CharField(max_length=20, blank=True, null=True)
+    title_experience = models.CharField(max_length=200, blank=True, null=True)
     description_experience = models.CharField(
         max_length=200, blank=True, null=True)
     date_experience = models.CharField(max_length=20,

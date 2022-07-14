@@ -16,7 +16,7 @@
                         <div class="about-text padd-15">
                             <!-- about text-->
                             <p>
-                                {{ me.userprofile.about_me.body }}
+                                {{ me.userprofile.about_me.body|safe }}
                             </p>
                             <div>
                                 <a Download href="{{me.userprofile.Cv.url}}" class="btn btn-primary">Download CV</a>

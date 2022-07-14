@@ -18,7 +18,7 @@
                 </div>
                 <div class="details-update">
                     <span class="details-subtitle">Last update : </span>
-                    <h3 class="details-data-title">/h3>
+                    <h3 class="details-data-title"> {{ object.final_date }} </h3>
                 </div>
                 <div class="details-rating">
                     <span class="details-subtitle">Review : </span>
@@ -35,7 +35,7 @@
             <img src="{{ object.image.url }}" alt="image-" class="details-img">
             <div class="portfolio-description">
                 <p class="portfolio-description-details">
-                    {{ object.body }}
+                    {{ object.body|safe }}
                 </p>
                 <div class="description-list">
                     <h3 class="description-list-title"> what is the target ? </h3>
@@ -61,15 +61,15 @@
             <div class="introduction-content">
                 <div class="introduction-group">
                     <i class='bx bxs-graduation introduction-icon'></i>
-                    <h3 class="introduction-info"><span> Order Date :</span>  {{ object.order_date }}</h3>
+                    <h3 class="introduction-info"><span> Order Date :</span>  {{ object.order_date|date }}</h3>
                 </div>
                 <div class="introduction-group">
                     <i class='bx bxs-graduation introduction-icon'></i>
-                    <h3 class="introduction-info"><span> Final Date :</span>  {{ object.final_date }}</h3>
+                    <h3 class="introduction-info"><span> Final Date :</span>  {{ object.final_date|date }}</h3>
                 </div>
                 <div class="introduction-group">
                     <i class='bx bxs-graduation introduction-icon'></i>
-                    <h3 class="introduction-info"><span> Status :</span>  {{ object.status }}</h3>
+                    <h3 class="introduction-info"><span> Status :</span>  {{ object.status }} </h3>
                 </div>
             </div>
         </div>
