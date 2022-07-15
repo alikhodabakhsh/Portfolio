@@ -28,12 +28,14 @@
                                 <!-- about text-->
                                 <div class="skill-item">
                                     {% for skill in me.userprofile.skills.all %}
+                                    {% if skill.is_key_skill %}
                                     <h4> {{ skill.name }} </h4>
                                     <div class="porgress">
                                         <div class="porgress-in" style=" width:{{ skill.score }}%; background:#ff9415;" >
                                         </div>
                                         <div class="skill-persent">{{ skill.score }}</div>
                                     </div>
+                                    {% endif %}
                                     {% endfor %}
                                 </div>
                                 

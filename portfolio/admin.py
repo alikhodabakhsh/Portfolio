@@ -7,13 +7,13 @@ from . models import (
     AboutMe,
     Services,
     Resume,
-    )
+)
 
 
 @admin.register(UserProfile)
 class UserProfileAdmin(admin.ModelAdmin):
-	list_display = ('user',)
-
+    list_display = ('user', 'job', 'email', 'linkedin', )
+    list_filter = ('skills',)
 
 
 @admin.register(Portfolio)
@@ -30,7 +30,7 @@ class ServicesAdmin(admin.ModelAdmin):
 @admin.register(Resume)
 class ResumeAdmin(admin.ModelAdmin):
     list_display = ('title_education', 'title_experience', )
-    
+
 
 @admin.register(Skill)
 class SkillAdmin(admin.ModelAdmin):
@@ -39,9 +39,9 @@ class SkillAdmin(admin.ModelAdmin):
 
 @admin.register(AboutMe)
 class AboutMeAdmin(admin.ModelAdmin):
-    list_display = ('title','id',)
+    list_display = ('title', 'id',)
 
 
 @admin.register(ContactProfile)
 class ContactAdmin(admin.ModelAdmin):
-	list_display = ('timestamp', 'name',)
+    list_display = ('timestamp', 'name',)
